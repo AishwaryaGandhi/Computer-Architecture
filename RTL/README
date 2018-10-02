@@ -1,1 +1,8 @@
+CODE STRUCTURE
 
+• main.sv: It includes the main module that stitches the rest of the modules together.
+• Reg_fetch.sv: It implements the Register Fetch operation stage. It fetches the forwarded data from stages 2-7 for Even pipe & stages 4-7 for Odd pipe along with data from the register file.
+• evenpipe.sv: It implements the 7-stage Even Pipe. It includes Simple Fixed 1, Simple Fixed 2, Floating Point & Byte Instructions
+• oddpipe.sv: It implements the 7-stage Odd Pipe. It includes Permute, Local Store & Branch Instructions.
+• wb.sv: It implements the write back stage in which the output is written to the destination register address in the register File.
+• tb.sv This includes the test bench module.
